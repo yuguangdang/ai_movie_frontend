@@ -1,0 +1,8 @@
+:root {
+  --primary-color: #242434;
+  --secondary-color: #e76462;
+  --success-color: #1a1a28;
+  --danger-color: #dc3545;
+  --primary-text-color: white;
+  --secondary-text-color: hsla(0, 0%, 100%, 0.9);
+}

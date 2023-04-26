@@ -1,0 +1,24 @@
+@import "./variables.css";
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-bottom: 2px solid;
+  border-color: hsla(0, 0%, 100%, 0.06);
+  display: flex;
+  margin-bottom: 5px;
+  padding: 10px 0;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.list a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
