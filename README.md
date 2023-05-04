@@ -21,5 +21,8 @@ This web application is a single-page application (SPA) created using React and 
 <h3>Step 3</h3>
 <img width="500" alt="step3" src="https://user-images.githubusercontent.com/55920971/236076817-969f926d-99ed-4868-bd40-1d3c92083423.png">
 
+<h3>About page</h3>
+<img width="500" alt="step3" src="https://user-images.githubusercontent.com/55920971/236164388-43145c48-2855-4ca0-a94a-3d404a6254c7.png">
+
 <h3>An example of the final video</h3>
 https://www.youtube.com/watch?v=0BVyKuEqcHE&ab_channel=StaryAI
