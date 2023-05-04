@@ -19,4 +19,4 @@ The APP combines various AI technologies such as natural language processing, co
 <img width="500" alt="step3" src="https://user-images.githubusercontent.com/55920971/236076817-969f926d-99ed-4868-bd40-1d3c92083423.png">
 
 <h3>A example of final video</h3>
-[<a hr></a>](https://www.youtube.com/watch?v=-ZWXhN1gPMc&t=52s&ab_channel=StaryAI)
+(https://www.youtube.com/watch?v=-ZWXhN1gPMc&t=52s&ab_channel=StaryAI)
