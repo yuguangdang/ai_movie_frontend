@@ -4,6 +4,9 @@ Stary AI is a web APP that enables users to enter a prompt, such as a character 
 
 The APP combines various AI technologies such as natural language processing, computer vision, and text-to-speech to create a unique and personalized user experience. It could potentially be used for various purposes such as entertainment, education, or marketing.
 
+<h1>Architecture</h1>
+The front-end is built with React and Redux and the back-end is a RESTful API built with NodeJS and Express, communicating with various APIs such as ChatGPT, Dalle 2, and FakeYou. 
+
 <h1>Workflow</h1>
 
 <h3>Intro info</h3>
