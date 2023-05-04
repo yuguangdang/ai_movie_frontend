@@ -22,4 +22,4 @@ The front-end is built with React and Redux and the back-end is a RESTful API bu
 <img width="500" alt="step3" src="https://user-images.githubusercontent.com/55920971/236076817-969f926d-99ed-4868-bd40-1d3c92083423.png">
 
 <h3>An example of the final video</h3>
-[https://www.youtube.com/watch?v=-ZWXhN1gPMc&t=52s&ab_channel=StaryAI](https://www.youtube.com/watch?v=0BVyKuEqcHE&ab_channel=StaryAI)
+https://www.youtube.com/watch?v=0BVyKuEqcHE&ab_channel=StaryAI
