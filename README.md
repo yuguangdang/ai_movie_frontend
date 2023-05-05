@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+<h1>Overview</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Stary AI is a web APP that enables users to enter a prompt, such as a character or a subject, which is then used to generate a story using the ChatGPT API. Users can also choose a style of image for each paragraph in the created story, which is generated using Dalle 2. Additionally, users can select a narrative voice, which can be that of a celebrity or even an anime character. The story text is then sent to FakeYou, which returns an audio file in the chosen character's voice. Finally, the application creates a video that displays images with the narration for the user to enjoy.
 
-## Available Scripts
+The APP combines various AI technologies such as natural language processing, computer vision, and text-to-speech to create a unique and personalized user experience. It could potentially be used for various purposes such as entertainment, education, or marketing.
 
-In the project directory, you can run:
+<h1>Architecture</h1>
+This web application is a single-page application (SPA) created using React and Redux for the frontend, while the backend is a RESTful API developed with NodeJS and Express. The API communicates with multiple third-party APIs such as ChatGPT, Dalle 2, and FakeYou to provide its functionalities.
 
-### `npm start`
+<h1>Workflow</h1>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>Intro info</h3>
+<img width="500" alt="Intro" src="https://user-images.githubusercontent.com/55920971/236075153-ac839a0c-f672-4ec3-bc39-83cbf65d7f51.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>Step 1</h3>
+<img width="500" alt="step 1" src="https://user-images.githubusercontent.com/55920971/236075976-0346699a-2f3d-4b3f-ae98-1abfebf81fde.png">
 
-### `npm test`
+<h3>Step 2</h3>
+<img width="500" alt="step 2" src="https://user-images.githubusercontent.com/55920971/236076795-513226f5-ff78-4d2e-ae1d-7af0304f0011.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>Step 3</h3>
+<img width="500" alt="step3" src="https://user-images.githubusercontent.com/55920971/236076817-969f926d-99ed-4868-bd40-1d3c92083423.png">
 
-### `npm run build`
+<h3>About page</h3>
+<img width="500" alt="step3" src="https://user-images.githubusercontent.com/55920971/236164388-43145c48-2855-4ca0-a94a-3d404a6254c7.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h3>An example of the final video</h3>
+https://www.youtube.com/watch?v=0BVyKuEqcHE&ab_channel=StaryAI
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3>Responsive Web Design</h3>
+The App adopts responsive web design to provide an optimal viewing and interaction experience across a wide range of devices, including desktop computers, laptops, tablets, and smartphones. For example, the App adjusts the size and placement of images and text, reorganize navigation menus, and adjust the flow of content to make it easier to read and interact with on smaller screens. Below are screenshots of how the App looks like in a mobile size screen.
+<hr/>
+<div>
+  <img width="150" height="300" alt="intro-m" src="https://user-images.githubusercontent.com/55920971/236356556-c23f49e1-0ee8-42fb-9ce2-08fc3f091653.png">
+  <img width="150" height="300" alt="step1-m" src="https://user-images.githubusercontent.com/55920971/236356538-057660d5-cd46-4144-b1e5-32577e448b26.png">
+  <img width="150" height="300" alt="step2-m" src="https://user-images.githubusercontent.com/55920971/236356550-cb63cd42-2c44-4157-8f82-3e1cc5f20ac7.png">
+  <img width="150" height="300" alt="step3-m" src="https://user-images.githubusercontent.com/55920971/236356557-2a866b68-52ea-403e-bdd6-7d184f303f76.png">
+  <img width="150" height="300" alt="about-m" src="https://user-images.githubusercontent.com/55920971/236356560-b8bd2003-98e3-4648-83a2-2058965230b0.png">
+</div>
