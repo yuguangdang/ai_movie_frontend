@@ -1,0 +1,63 @@
+@import "./variables.css";
+
+.span {
+  color: var(--secondary-color);
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.label {
+  width: 100%;
+  text-align: center;
+}
+
+.input {
+  margin-left: 2%;
+  border-radius: 6px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+
+.p {
+  color: gray;
+}
+
+.storyContainer {
+  width: 80%;
+  text-align: justify;
+  background-color: #39394c !important;
+  border-color: #39394c !important;
+  border-radius: 0.5rem;
+  color: #fff !important;
+  margin: 4% 0% 2% 0%;
+  padding: 2%;
+}
+
+.createStoryContainer {
+  text-align: center;
+}
+
+.loadingContainer {
+  margin: 4% 0% 2% 0%;
+  padding: 2%;
+  text-align: center;
+  background-color: #39394c;
+  border-color: #39394c !important;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .storyContainer {
+    width: 100%;
+  }
+}

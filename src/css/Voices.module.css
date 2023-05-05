@@ -1,0 +1,43 @@
+@import './variables.css';
+
+.voicesContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  text-align: left;
+  background-color: #39394c !important;
+  border-color: #39394c !important;
+  border-radius: 0.5rem;
+  color: #fff !important;
+  margin: 2%;
+  padding: 2%;
+}
+
+.vContainer {
+  margin: 2%;
+  text-align: center;
+}
+
+.vContainer:last-of-type:nth-child(odd) {
+  margin-left: auto;
+}
+
+.img {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  border: solid 0.5rem;
+}
+
+.img:hover, .vContainer:hover {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.isSelect {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}

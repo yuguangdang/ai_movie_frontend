@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #242434;
+  /* --primary-color: #242434; */
+  --primary-color: rgba(36, 36, 52, 0.5);
   --secondary-color: #e76462;
-  --success-color: #1a1a28;
-  --danger-color: #dc3545;
-  --primary-text-color: white;
-  --secondary-text-color: hsla(0, 0%, 100%, 0.9);
+  --background-color: #1a1a28;
+  --error-color: #ef8484;
+  --error-background-color: #423b3b;
 }

@@ -1,0 +1,28 @@
+@import "./variables.css";
+
+.h1 {
+  font-size: 3rem;
+}
+.span {
+  color: var(--secondary-color);
+}
+
+.textContainer {
+  padding-left: 5%;
+}
+
+.p {
+  color: gray;
+}
+
+.imageContainer {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 800px) {
+  .imageContainer {
+    display: none;
+  }
+}

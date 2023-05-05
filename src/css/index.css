@@ -1,4 +1,4 @@
-
+@import "./variables.css";
 
 * {
   box-sizing: border-box;
@@ -6,11 +6,22 @@
 
 html {
   font-family: 'Noto Sans JP', sans-serif;
+  height: 100%;
+  margin: 0;
 }
 
 body {
+  height: 100%;
   margin: 0;
-  background-color: var(--success-color);
+  background-color: var(--background-color);
+  color: white;
+  font-size: 1.2rem;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 button {
@@ -18,14 +29,28 @@ button {
   cursor: pointer;
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
-  background-color: transparent;
-  color: #1a8ed1;
-  border: 1px solid #1a8ed1;
+  background-color: var(--secondary-color);
+  color: white;
+  border: 1px solid var(--secondary-color);
 }
 
 button:hover,
 button:active {
-  background-color: #1ac5d1;
-  border-color: #1ac5d1;
+  background-color: var(--primary-color);
+  /* cursor: pointer; */
   color: white;
+}
+
+hr {
+  border-color: gray;
+  border-width: 1px;
+}
+
+.disabled-button {
+  opacity: 0.5; 
+  cursor: not-allowed; 
+}
+
+.hide {
+  display: none;
 }

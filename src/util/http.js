@@ -30,8 +30,9 @@ export async function createImages(story, style) {
   }
 }
 
-export async function createMovie(story, images, voice) {
-  const data = { prompts: story, images: images, voice: voice };
+export async function createMovie(prompt,story, images, narrator) {
+  const data = {prompt: prompt, story: story, images: images, narrator: narrator };
+  console.log(data)
   const httpUrl = BAKCEND_URL + "/create/create-movie";
 
   try {

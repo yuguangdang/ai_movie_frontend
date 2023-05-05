@@ -1,0 +1,18 @@
+@import "./variables.css";
+
+.error {
+  background: var(--error-background-color);
+  color: var(--error-color);
+  display: flex;
+  flex-direction: column;
+  text-align: initial;
+  border: 1px solid #ef8484;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 10px;
+}
+
+.error button {
+  width: 10%;
+  margin-left: auto;
+}

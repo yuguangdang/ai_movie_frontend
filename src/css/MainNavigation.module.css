@@ -8,8 +8,9 @@
   border-bottom: 2px solid;
   border-color: hsla(0, 0%, 100%, 0.06);
   display: flex;
-  margin-bottom: 5px;
-  padding: 10px 0;
+  padding: 0.5% 10%;
+  z-index: 10;
+  position: relative;
 }
 
 .list {
@@ -21,4 +22,69 @@
 .list a {
   text-decoration: none;
   color: var(--secondary-text-color);
+  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  margin: 5%;
+}
+
+.list a:hover,
+.list a.active {
+  color: var(--secondary-color);
+}
+
+.hamburger {
+  display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    width: fit-content;
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin: 0 1%;
+    border-radius: 0.5rem;
+    right: 0;
+    background-color: rgb(36, 36, 52);
+    padding: 1rem;
+    padding-right: inherit;
+    border-color: hsla(0, 0%, 100%, 0.071) !important;
+    border: 2px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.16), 0 70px 65px rgba(0, 0, 0, 0.08),
+      0 30px 30px rgba(0, 0, 0, 0.07), 0 15px 15px rgba(0, 0, 0, 0.05),
+      0 10px 8px rgba(0, 0, 0, 0.03), 0 4px 4px rgba(0, 0, 0, 0.02),
+      0 2px 2px rgba(0, 0, 0, 0.01) !important;
+  }
+
+  .list {
+    flex-direction: column;
+  }
+
+  .burgerNavActive {
+    display: flex;
+  }
+
+  .link {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+
+  .hamburger:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+  }
 }

@@ -3,8 +3,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CreateMoviePage from "./component/page/CreateMoviePage";
 import PricePage from "./component/page/PricePage";
 import AboutPage from "./component/page/AboutPage";
-import GalleryPage from "./component/page/GalleryPage";
-import RootLayout from "./component/page/Root";
+import VideosPage from "./component/page/VideosPage";
+import RootLayout from "./component/layout/Root";
+import TermsPage from "./component/page/TermsPage";
+import ScrollToTop from "./util/ScrollToTop";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +18,8 @@ const router = createBrowserRouter([
         element: <CreateMoviePage />,
       },
       {
-        path: "/movies",
-        element: <GalleryPage />,
+        path: "/videos",
+        element: <VideosPage />,
       },
       {
         path: "/price",
@@ -27,12 +29,20 @@ const router = createBrowserRouter([
         path: "/about",
         element: <AboutPage />,
       },
+      {
+        path: "/terms",
+        element: <TermsPage />,
+      },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <RouterProvider router={router}>
+      <ScrollToTop />
+    </RouterProvider>
+  );
 }
 
 export default App;

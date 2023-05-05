@@ -1,0 +1,91 @@
+@import "./variables.css";
+
+.h1 {
+  padding-left: 1%;
+}
+
+.span {
+  color: var(--secondary-color);
+}
+
+.ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.li {
+  text-align: justify;
+  background-color: #39394c !important;
+  border-color: #39394c !important;
+  border-radius: 0.5rem;
+  color: #fff !important;
+  padding: 1%;
+  flex: 1 0 23%;
+  margin: 1%;
+}
+
+.founderContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.selfIntroContainer {
+  flex: 1;
+  min-width: 1500;
+}
+
+.founderContainer div {
+  text-align: justify;
+}
+
+.contactContainer {
+  display: flex;
+  text-align: justify;
+  background-color: #39394c !important;
+  border-color: #39394c !important;
+  border-radius: 0.5rem;
+  color: #fff !important;
+  padding: 1% 2%;
+  margin: 0% 5%;
+}
+
+.icon {
+  color: rgb(219, 205, 205);
+}
+
+.iconContainer {
+  padding-top: 6%;
+}
+
+.iconContainer a {
+  margin-right: 1rem;
+}
+
+.cv {
+  color: white;
+}
+
+.cv :hover {
+  cursor: pointer;
+}
+
+.iconContainer a:hover .icon  {
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+  .founderContainer {
+    flex-direction: column;
+  }
+  .selfIntroContainer {
+    width: 100%;
+  }
+  .contactContainer {
+    width: 100%;
+    margin: 0;
+  }
+}
