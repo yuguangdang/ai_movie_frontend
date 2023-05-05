@@ -48,4 +48,11 @@ The App adopts responsive web design to provide an optimal viewing and interacti
   </li>
 </ul>
 
-
+<div>
+      <img width="150" alt="step1-m" src="https://user-images.githubusercontent.com/55920971/236356538-057660d5-cd46-4144-b1e5-32577e448b26.png">
+      <img width="150" alt="step2-m" src="https://user-images.githubusercontent.com/55920971/236356550-cb63cd42-2c44-4157-8f82-3e1cc5f20ac7.png">
+      <img width="150" alt="intro-m" src="https://user-images.githubusercontent.com/55920971/236356556-c23f49e1-0ee8-42fb-9ce2-08fc3f091653.png">
+      <img width="150" alt="step3-m" src="https://user-images.githubusercontent.com/55920971/236356557-2a866b68-52ea-403e-bdd6-7d184f303f76.png">
+      <img width="150" alt="about-m" src="https://user-images.githubusercontent.com/55920971/236356560-b8bd2003-98e3-4648-83a2-2058965230b0.png">
+  
+</div>
