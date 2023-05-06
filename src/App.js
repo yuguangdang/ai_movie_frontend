@@ -6,7 +6,6 @@ import AboutPage from "./component/page/AboutPage";
 import VideosPage from "./component/page/VideosPage";
 import RootLayout from "./component/layout/Root";
 import TermsPage from "./component/page/TermsPage";
-import ScrollToTop from "./util/ScrollToTop";
 
 const router = createBrowserRouter([
   {
@@ -38,11 +37,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return (
-    <RouterProvider router={router}>
-      <ScrollToTop />
-    </RouterProvider>
-  );
+  return <RouterProvider router={router}></RouterProvider>;
 }
 
 export default App;

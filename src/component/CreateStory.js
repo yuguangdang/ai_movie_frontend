@@ -4,6 +4,7 @@ import { useState } from "react";
 import { createStory } from "../util/http";
 import { movieActions } from "../store/movie-slice";
 import styles from "../css/CreateStory.module.css";
+import LoadingSign from "./UI/LoadingSign";
 
 function CreateStory() {
   const [isInputValid, setIsInputValid] = useState(false);
@@ -54,7 +55,8 @@ function CreateStory() {
         </button>
         {isLoading && (
           <div className={styles.loadingContainer}>
-            Creating a story about {prompt} ...
+            <h2> Creating a story about {prompt} ...</h2>
+            <LoadingSign />
           </div>
         )}
         <div

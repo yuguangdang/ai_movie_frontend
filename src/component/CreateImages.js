@@ -6,6 +6,7 @@ import { movieActions } from "../store/movie-slice";
 import styles from "../css/CreateImages.module.css";
 import Error from "./UI/Error";
 import zipArrays from "../util/zipArrays";
+import LoadingSign from "./UI/LoadingSign";
 
 function CreateStory() {
   const [isError, setIsError] = useState({ isError: false, message: "" });
@@ -97,7 +98,7 @@ function CreateStory() {
         )}
       </form>
 
-      {!isLoading? (
+      {!isLoading ? (
         <div className={styles.imageContainer}>
           {zipped.map((pair) => (
             <div key={pair[0]} className={styles.pictureCard}>
@@ -109,7 +110,10 @@ function CreateStory() {
           ))}
         </div>
       ) : (
-        <div className={styles.loadingContainer}>Creating images ...</div>
+        <div className={styles.loadingContainer}>
+          <h2>Creating images ...</h2>
+          <LoadingSign />
+        </div>
       )}
     </div>
   );
