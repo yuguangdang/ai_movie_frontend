@@ -6,6 +6,7 @@ import AboutPage from "./component/page/AboutPage";
 import VideosPage from "./component/page/VideosPage";
 import RootLayout from "./component/layout/Root";
 import TermsPage from "./component/page/TermsPage";
+import VideoDetailPage from "./component/page/VideoDetailPage";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
         path: "/terms",
         element: <TermsPage />,
       },
+      { path: "/videoDetail/:videoId", element: <VideoDetailPage /> },
     ],
   },
 ]);

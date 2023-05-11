@@ -12,7 +12,7 @@ function MainNavigation() {
 
   return (
     <header className={styles.header}>
-      <img src={logo} alt="logo" width="120" height="120" />
+      <img src={logo} alt="logo" />
       <nav
         className={`${styles.nav} ${isNavActive ? styles.burgerNavActive : ""}`}
       >

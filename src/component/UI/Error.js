@@ -1,11 +1,15 @@
 import styles from "../../css/Error.module.css";
 
-function Error({ message,  clickHandler}) {
+function Error({
+  message = "Oops! Something went wrong. Please refresh the page and try again. If the problem persists, please contact our support team.",
+  clickHandler,
+}) {
   return (
-    <div className={styles.error}>
-      <p>{message}</p>
-      <p>Try to use another prompt to create the story at the step one.</p>
-      <button onClick={clickHandler}>OK</button>
+    <div className={styles.modal}>
+      <div className={styles.error}>
+        <p>{message}</p>
+        <button onClick={clickHandler}>OK</button>
+      </div>
     </div>
   );
 }

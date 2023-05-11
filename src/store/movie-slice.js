@@ -1,19 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+  step: 1,
+  prompt: "",
+  story: [],
+  style: {
+    payload: "fantasy"
+  },
+  images: {
+    payload: [],
+  },
+  narrator: { name: "", id: "" },
+  isLoading: {
+    payload: false,
+  },
+  createMovieStatus: {
+    payload: { status: "not start", progress: 0 },
+  },
+  videos: {
+    payload: [],
+  },
+};
+
 const movieSlice = createSlice({
   name: "movie",
-  initialState: {
-    step: 1,
-    prompt: "",
-    story: [],
-    style: "",
-    images: [],
-    narrator: { name: "", id: "" },
-    isLoading: {
-      type: "movie/setIsLoading",
-      payload: false,
-    },
-  },
+  initialState: initialState,
   reducers: {
     setPrompt(state, prompt) {
       state.prompt = prompt;
@@ -40,6 +51,18 @@ const movieSlice = createSlice({
     },
     setIsLoading(state, isLoading) {
       state.isLoading = isLoading;
+    },
+    setVideoUrl(state, videoUrl) {
+      state.videoUrl = videoUrl;
+    },
+    reset(state) {
+      Object.assign(state, initialState);
+    },
+    setCreateMovieStatus(state, createMovieStatus) {
+      state.createMovieStatus = createMovieStatus;
+    },
+    setVideos(state, videos) {
+      state.videos = videos;
     },
   },
 });

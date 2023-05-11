@@ -4,34 +4,12 @@
   color: var(--secondary-color);
 }
 
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.createImageContainer h1 {
+  margin-bottom: 4%;
 }
 
-.label {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 3%;
-}
-
-.select {
-  margin-left: 2%;
-  border-radius: 6px;
-  font-size: 20px; /* Make the font size bigger */
-  color: #333; /* Change the text color */
-  background-color: #f2f2f2; /* Change the background color */
-  padding: 10px; /* Add padding */
-  border-radius: 5px; /* Add rounded corners */
-  border: none; /* Remove the border */
-  outline: none; /* Remove the outline */
-}
-
-.select:focus {
-  outline: none;
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 5px var(--secondary-color);
+.customSelect {
+  margin: auto;
 }
 
 .createImageContainer {
@@ -42,9 +20,6 @@
   margin: 4%;
   padding: 2%;
   text-align: center;
-  /* background-color: #39394c;
-  border-color: #39394c !important;
-  border-radius: 0.5rem; */
 }
 
 .pictureCard {
@@ -57,7 +32,8 @@
 }
 
 .pictureCard p {
-  text-align: center;
+  text-align: justify;
+  font-size: 0.8rem;
 }
 
 .pictureCard img {
@@ -84,19 +60,19 @@
   margin: 0 auto;
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 1400px) {
   .pictureCard {
     width: 31%;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .pictureCard {
     width: 48%;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .pictureCard {
     width: 98%;
   }

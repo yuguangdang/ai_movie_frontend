@@ -25,6 +25,7 @@
   padding: 1%;
   flex: 1 0 23%;
   margin: 1%;
+  min-width: 250px;
 }
 
 .founderContainer {

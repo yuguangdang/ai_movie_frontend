@@ -7,6 +7,7 @@ import styles from "../css/CreateImages.module.css";
 import Error from "./UI/Error";
 import zipArrays from "../util/zipArrays";
 import LoadingSign from "./UI/LoadingSign";
+import CustomSelect from "./UI/CustomSelect";
 
 function CreateStory() {
   const [isError, setIsError] = useState({ isError: false, message: "" });
@@ -18,10 +19,7 @@ function CreateStory() {
   const zipped = zipArrays(story, images);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(movieActions.setStyle("Fantasy"));
-  }, [dispatch]);
-
+  // Wait until all pics are loaded before display
   useEffect(() => {
     const imagesToLoad = images.length;
     let loadedCount = 0;
@@ -50,53 +48,45 @@ function CreateStory() {
 
   const errorConfirmHandler = () => {
     setIsError({ isError: false, message: "" });
-    dispatch(movieActions.setStep("prev"));
+    dispatch(movieActions.reset());
   };
 
-  const handleChange = (event) => {
-    dispatch(movieActions.setStyle(event.target.value));
-  };
-
-  const createImagesHandler = async (event) => {
-    event.preventDefault();
+  const selectHandler = async (selectStyle) => {
+    dispatch(movieActions.setStyle(selectStyle));
     dispatch(movieActions.setIsLoading(true));
     try {
-      const images = await createImages(story, style);
+      const images = await createImages(story, selectStyle);
       dispatch(movieActions.setImages(images));
     } catch (error) {
+      dispatch(movieActions.setIsLoading(false));
       setIsError({ isError: true, message: error.response.data.error.message });
     }
   };
 
   return (
     <div className={styles.createImageContainer}>
-      <h1>Step 2: Create images based on your story</h1>
-      <form onSubmit={createImagesHandler} className={styles.formContainer}>
-        <label htmlFor="styles" className={styles.label}>
-          Choose a style of images:
-          <select
-            id="styles"
-            name="style"
-            onChange={handleChange}
-            className={styles.select}
-          >
-            <option value="Fantasy">Fantasy</option>
-            <option value="Realism">Realism</option>
-            <option value="Disney">Disney</option>
-            <option value="Surrealism">Surrealism</option>
-            <option value="Anime">Anime</option>
-            <option value="Abstract">Abstract</option>
-            <option value="Pop Art">Pop Art</option>
-            <option value="Cartoon">Cartoon</option>
-          </select>
-        </label>
-        <button type="submit" className={isLoading ? "disabled-button" : ""}>
-          Create images
-        </button>
-        {isError.isError && (
-          <Error message={isError.message} clickHandler={errorConfirmHandler} />
-        )}
-      </form>
+      <h2>Step 2: Create images based on your story</h2>
+      <CustomSelect
+        className={styles.customSelect}
+        onSelect={selectHandler}
+        options={[
+          "Fantasy",
+          "Realistic",
+          "Disney",
+          "Surrealistic",
+          "Anime",
+          "Retro",
+          "Watercolor",
+          "Cartoon",
+          "Oil painting",
+          "Sketch",
+        ]}
+        defaultOption="Choose a style"
+      />
+
+      {isError.isError && (
+        <Error message={isError.message} clickHandler={errorConfirmHandler} />
+      )}
 
       {!isLoading ? (
         <div className={styles.imageContainer}>
@@ -111,7 +101,9 @@ function CreateStory() {
         </div>
       ) : (
         <div className={styles.loadingContainer}>
-          <h2>Creating images ...</h2>
+          <h3>{`Creating images in ${
+            style.charAt(0).toLowerCase() + style.slice(1)
+          } style ...`}</h3>
           <LoadingSign />
         </div>
       )}

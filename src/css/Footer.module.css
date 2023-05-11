@@ -33,7 +33,7 @@
 }
 
 .list a {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: none;
   color: var(--secondary-text-color);
 }
@@ -59,10 +59,10 @@
 }
 
 .img {
-  max-width: 8rem;
+  max-width: 5rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .list a {
     font-size: 1rem;
   }

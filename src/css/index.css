@@ -15,7 +15,7 @@ body {
   margin: 0;
   background-color: var(--background-color);
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #root {
@@ -37,7 +37,7 @@ button {
 button:hover,
 button:active {
   background-color: var(--primary-color);
-  /* cursor: pointer; */
+  cursor: pointer;
   color: white;
 }
 

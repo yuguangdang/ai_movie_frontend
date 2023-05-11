@@ -4,7 +4,7 @@ const particleOptions = {
       value: "#1a1a28",
     },
   },
-  fpsLimit: 1000,
+  fpsLimit: 500,
   //   interactivity: {
   //     events: {
   //       onClick: {

@@ -1,0 +1,36 @@
+@import "./variables.css";
+
+.customSelect {
+  position: relative;
+  width: 12rem;
+}
+
+.customSelect button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.customSelect ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+.customSelect ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.customSelect ul li:hover {
+  /* background-color: #eee; */
+  color: var(--secondary-color);
+}
+
+.customSelect.show ul {
+  display: block;
+}

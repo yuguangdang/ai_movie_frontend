@@ -1,11 +1,11 @@
 import axios from "axios";
 
-// const BAKCEND_URL = "http://172.16.11.253:8080";
-const BAKCEND_URL = "http://localhost:8080";
+// const BACKEND_URL = "http://localhost:8080";
+const BACKEND_URL = "http://staryai.ap-southeast-2.elasticbeanstalk.com";
 
 export async function createStory(prompt) {
   const data = { prompt: prompt };
-  const httpUrl = BAKCEND_URL + "/create/create-story";
+  const httpUrl = BACKEND_URL + "/create/create-story";
 
   try {
     const response = await axios.post(httpUrl, data);
@@ -18,7 +18,7 @@ export async function createStory(prompt) {
 
 export async function createImages(story, style) {
   const data = { prompts: story, style: style };
-  const httpUrl = BAKCEND_URL + "/create/create-images";
+  const httpUrl = BACKEND_URL + "/create/create-images";
 
   try {
     const response = await axios.post(httpUrl, data);
@@ -30,16 +30,52 @@ export async function createImages(story, style) {
   }
 }
 
-export async function createMovie(prompt,story, images, narrator) {
-  const data = {prompt: prompt, story: story, images: images, narrator: narrator };
-  console.log(data)
-  const httpUrl = BAKCEND_URL + "/create/create-movie";
+
+export async function createMovie(prompt, story, images, narrator, handleStatusUpdate) {
+  const data = { prompt, story, images, narrator };
+  const createMovieUrl = `${BACKEND_URL}/create/create-movie`;
+  const getCreateMovieStatusUrl = `${BACKEND_URL}/create/get-create-movie-status`;
 
   try {
-    const response = await axios.post(httpUrl, data);
-    console.log(response)
+    const { data: { requestId } } = await axios.post(createMovieUrl, data);
+
+    await new Promise((resolve, reject) => {
+      const checkInterval = setInterval(async () => {
+        try {
+          const { data: statusData } = await axios.get(`${getCreateMovieStatusUrl}?requestId=${requestId}`);
+          handleStatusUpdate(statusData);
+
+          if (statusData.status === "finished") {
+            clearInterval(checkInterval);
+            resolve();
+          } else if (statusData.status === "error") {
+            console.error(statusData.error);
+            clearInterval(checkInterval);
+            reject(new Error(statusData.error));
+          }
+        } catch (error) {
+          console.error("Error in getCreateMovieStatus:", error);
+          clearInterval(checkInterval);
+          reject(error);
+        }
+      }, 5000);
+    });
   } catch (error) {
     console.error("Error in createMovie:", error);
+    throw error;
+  }
+}
+
+
+
+export async function getVideos() {
+  const httpUrl = BACKEND_URL + "/create/get-videos";
+
+  try {
+    const response = await axios.get(httpUrl);
+    return response.data;
+  } catch (error) {
+    console.error("Error in get video urls:", error);
     throw error;
   }
 }

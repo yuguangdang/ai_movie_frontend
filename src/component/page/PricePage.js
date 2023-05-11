@@ -5,7 +5,7 @@ function MainNavigation() {
   return (
     <Panel>
       <div className={styles.container}>
-        <h1>Pricing</h1>
+        <h2>Pricing</h2>
         <div className={styles.textContainer}>
           <p>
             To use the OpenAI API for ChatGPT and DALL-E to generate stories and
@@ -17,8 +17,9 @@ function MainNavigation() {
           <p>
             Developing this project has been a pleasure, and I hope that users
             will enjoy the app as well. If web traffic were to significantly
-            increase in the future, I may consider monetizing the service, but
-            for now, it is completely free for everyone to enjoy.
+            increase in the future, I may consider monetizing the service to
+            cover the cost, but for now, it is completely free for everyone to
+            enjoy.
           </p>
         </div>
       </div>

@@ -21,9 +21,9 @@ function AboutPage() {
           </h1>
           <ul className={styles.ul}>
             <li className={styles.li}>
-              <h2>
+              <h3>
                 <span className={styles.span}>Creativity</span>
-              </h2>
+              </h3>
               <p>
                 Stary AI allows users to input a simple prompt and generate a
                 story and images that correspond to the input. This can be a fun
@@ -32,9 +32,9 @@ function AboutPage() {
               </p>
             </li>
             <li className={styles.li}>
-              <h2>
+              <h3>
                 <span className={styles.span}>Customization</span>
-              </h2>
+              </h3>
               <p>
                 With the ability to select different image styles and narrative
                 voices, users can personalize their experience and create
@@ -42,9 +42,9 @@ function AboutPage() {
               </p>
             </li>
             <li className={styles.li}>
-              <h2>
+              <h3>
                 <span className={styles.span}>Learning</span>
-              </h2>
+              </h3>
               <p>
                 Using this app can expose users to these technologies of of
                 natural language processing, image generation, and voice
@@ -53,9 +53,9 @@ function AboutPage() {
               </p>
             </li>
             <li className={styles.li}>
-              <h2>
+              <h3>
                 <span className={styles.span}>Entertainment</span>
-              </h2>
+              </h3>
               <p>
                 The app creates a video that combines images and narration,
                 which can be a fun and engaging way to consume content. Users

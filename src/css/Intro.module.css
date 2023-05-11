@@ -1,10 +1,15 @@
 @import "./variables.css";
 
 .h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .span {
   color: var(--secondary-color);
+}
+
+.introContainer {
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
 
 .textContainer {
@@ -19,9 +24,16 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  flex: 1;
 }
 
-@media (max-width: 800px) {
+.imageContainer img {
+  width: 80%;
+  min-width: 10rem;
+  max-width: 20rem;
+}
+
+@media (max-width: 600px) {
   .imageContainer {
     display: none;
   }

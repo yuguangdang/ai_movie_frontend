@@ -16,18 +16,18 @@
 }
 
 .vContainer {
-  margin: 2%;
+  margin: 2% 1%;
   text-align: center;
 }
 
-.vContainer:last-of-type:nth-child(odd) {
-  margin-left: auto;
+.vContainer audio {
+  width: 10rem;
 }
 
 .img {
   border-radius: 50%;
-  width: 12rem;
-  height: 12rem;
+  width: 9rem;
+  height: 9rem;
   border: solid 0.5rem;
 }
 

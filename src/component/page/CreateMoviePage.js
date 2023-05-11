@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import Intro from "../Intro";
 import styles from "../../css/CreateMoviePage.module.css";
 import { createMovie } from "../../util/http";
+import Error from "../UI/Error";
 
 function CreateMoviePage() {
   const step = useSelector((state) => state.movie.step);
@@ -21,14 +22,33 @@ function CreateMoviePage() {
   const dispatch = useDispatch();
 
   const [isNextDisabled, setIsNextDisabled] = useState(true);
+  const [isError, setIsError] = useState({ isError: false });
 
-  const stepHandler = (stepDirection) => {
-    if (step === 3 && stepDirection === "next") {
-      createMovie(prompt, story, images, narrator);
-    }
-    dispatch(movieActions.setStep(stepDirection));
+  // Error handler
+  const errorConfirmHandler = () => {
+    setIsError({ isError: false, message: "" });
+    dispatch(movieActions.reset());
   };
 
+  // Update creating video status in Redux
+  const handleStatusUpdate = (status) => {
+    dispatch(movieActions.setCreateMovieStatus(status));
+  };
+
+  // Handle steps
+  const stepHandler = async (stepDirection) => {
+    dispatch(movieActions.setStep(stepDirection));
+    // Create the final video
+    if (step === 3 && stepDirection === "next") {
+      try {
+        await createMovie(prompt, story, images, narrator, handleStatusUpdate);
+      } catch (err) {
+        setIsError({ isError: true });
+      }
+    }
+  };
+ 
+  // Set which step the user is at currently
   useEffect(() => {
     setIsNextDisabled(true);
     if (step === 1 && story.length > 0) {
@@ -44,10 +64,6 @@ function CreateMoviePage() {
       setIsNextDisabled(false);
     }
   }, [story, images, narrator, step]);
-
-  useEffect(() => {
-    dispatch(movieActions.setImages([]));
-  }, [dispatch, story]);
 
   let process;
 
@@ -74,10 +90,20 @@ function CreateMoviePage() {
       <Intro />
       <Panel>
         <div>
+          {isError.isError && (
+            <Error
+              message={isError.message}
+              clickHandler={errorConfirmHandler}
+            />
+          )}
           <div>{process}</div>
           <div
             className={styles.buttonContainer}
-            style={isLoading ? { display: "none" } : { display: "flex" }}
+            style={
+              isLoading || step === 4
+                ? { display: "none" }
+                : { display: "flex" }
+            }
           >
             <button
               style={step === 1 ? { display: "none" } : { display: "block" }}
@@ -89,7 +115,7 @@ function CreateMoviePage() {
               onClick={stepHandler.bind(null, "next")}
               className={isNextDisabled ? "hide" : ""}
             >
-              Next
+              {step === 3 ? "Create video" : "Next"}
             </button>
           </div>
         </div>

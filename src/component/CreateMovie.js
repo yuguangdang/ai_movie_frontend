@@ -10,7 +10,7 @@ function CreateMovie() {
         justifyContent: "center",
       }}
     >
-      <h1>Step 3: Choose your favourite character to read your story.</h1>
+      <h2>Step 3: Choose your favourite character to read your story.</h2>
       <Voices />
     </div>
   );

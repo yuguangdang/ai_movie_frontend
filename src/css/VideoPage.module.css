@@ -1,0 +1,49 @@
+@import "./variables.css";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container a {
+  text-decoration: none;
+  color: white;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  margin: 1%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+.pagination > * {
+  font-size: 1.2rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.pagination > *:hover {
+  color: var(--secondary-color);
+}
+
+.container a :hover {
+  color: var(--secondary-color);
+}
+
+.active {
+  color: var(--secondary-color);
+}

@@ -13,6 +13,11 @@
   position: relative;
 }
 
+.header img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
 .list {
   display: flex;
   gap: 1rem;
@@ -23,7 +28,7 @@
   text-decoration: none;
   color: var(--secondary-text-color);
   transition: color 0.3s ease;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 5%;
 }
 
@@ -35,7 +40,6 @@
 .hamburger {
   display: none;
 }
-
 
 @media screen and (max-width: 800px) {
   .header {
@@ -79,7 +83,7 @@
 
   .hamburger {
     display: flex;
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
   }
 

@@ -10,7 +10,7 @@ export default function TermsPage() {
   return (
     <Panel>
       <div style={{ textAlign: "center" }}>
-        <h1>Terms and Conditions of Use</h1>
+        <h1 style={{color: "#e76462"}}>Terms and Conditions of Use</h1>
         <div style={{ textAlign: "justify", marginTop: "3rem", padding: "2%" }}>
           <h2>1. General Information</h2>
           <p>

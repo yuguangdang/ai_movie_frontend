@@ -1,0 +1,15 @@
+/* ProgressBar.module.css */
+
+.container {
+  width: 50%;
+  background-color: #ddd;
+  border-radius: 2rem;
+  margin: auto;
+}
+
+.bar {
+  height: 10px;
+  background-color: #e76461;
+  transition: width 5s;
+  border-radius: 2rem;
+}

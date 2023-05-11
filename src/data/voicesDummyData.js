@@ -1,19 +1,11 @@
 const voices = [
   {
     name: "Arnold Schwarzenegger",
-    id: "TM:w9qw1bp2hgxf",
+    id: "TM:gx7a6exf3bda",
     imageUrl:
       "https://www.superherohype.com/wp-content/uploads/sites/4/2019/03/Arnold-Schwarzenegger-Terminator-Genisys.jpg",
     audioUrl:
-      "https://storage.googleapis.com/vocodes-public/tts_inference_output/a/9/9/vocodes_a99291ec-7403-4331-bac4-b87c40bc93c9.wav",
-  },
-  {
-    name: "Queen Elizabeth",
-    id: "TM:4jhmevqnrqp5",
-    imageUrl:
-      "https://new-media.dhakatribune.com/en/uploads/2022/09/08/family-rush-to-be-with-queen-elizabeth-ii-as-doctors-voice-concern.jpeg",
-    audioUrl:
-      "https://storage.googleapis.com/vocodes-public/tts_inference_output/a/b/0/vocodes_ab052985-4292-4e0d-892c-b2dd50fdb236.wav",
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/b/8/b/vocodes_b8b5d3a4-5a43-40fa-890f-4e1d8edcf3f9.wav",
   },
   {
     name: "Donald Trump",
@@ -21,15 +13,7 @@ const voices = [
     imageUrl:
       "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2017/01/donald-trump123-1485421836.jpg",
     audioUrl:
-      "https://storage.googleapis.com/vocodes-public/tts_inference_output/5/9/4/vocodes_594ef22f-1332-462d-9c75-2791a1cf4b9e.wav",
-  },
-  {
-    name: "David Attenborough",
-    id: "TM:rvrhhhzqard1",
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjfZqNdim7dHfGVf3LIZ7vb67B1RoQm0inbw&usqp=CAU",
-    audioUrl:
-      "https://storage.googleapis.com/vocodes-public/tts_inference_output/4/c/2/vocodes_4c2ffe97-35ba-40e6-9428-3dd186e991a4.wav",
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/d/5/f/vocodes_d5fea3de-c44e-483b-bc4d-e9079365a119.wav",
   },
   {
     name: "Emma Watson",
@@ -37,7 +21,43 @@ const voices = [
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzi5IoZfZv571ykwiYvfPa32Nnx6Ro6Xce8Q&usqp=CAU",
     audioUrl:
-      "https://storage.googleapis.com/vocodes-public/tts_inference_output/8/9/3/vocodes_89395042-769e-4123-901b-abc7400583eb.wav",
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/a/3/6/vocodes_a364cd98-9d04-49a6-8a47-5f05caeb7207.wav",
+  },
+  {
+    name: "David Attenborough",
+    id: "TM:6a47q3wc0wcd",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjfZqNdim7dHfGVf3LIZ7vb67B1RoQm0inbw&usqp=CAU",
+    audioUrl:
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/5/e/8/vocodes_5e823003-e89a-45e1-bab0-c4ff9251b690.wav",
+  },
+  {
+    name: "Joe Biden",
+    id: "TM:wsvak9gwrdqf",
+    imageUrl: "https://i.insider.com/5fe27910a6448800181930e3?width=700",
+    audioUrl:
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/6/0/7/vocodes_6079edc3-b26e-4cde-b293-ab04776e9b60.wav",
+  },
+  {
+    name: "Wednesday Addams",
+    id: "TM:pqv7261xqhjk",
+    imageUrl: "https://i.guim.co.uk/img/media/4df0f504cefb4a5a19966d7dd0f8787b45c6d4ff/259_0_3000_1800/master/3000.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=39bc597b181b507e50198d6f4984274d",
+    audioUrl:
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/9/6/c/vocodes_96ce9f06-e947-415d-ab80-b24418f226df.wav",
+  },
+  {
+    name: "Kanye West",
+    id: "TM:1a7mjjxwq4js",
+    imageUrl: "https://media.wired.com/photos/63226fd374ce5b82a68ef212/master/w_2560%2Cc_limit/Kanye-West-Black-Skinhead-Excerpt-Culture-1205198865.jpg",
+    audioUrl:
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/a/d/0/vocodes_ad087ea9-153d-4624-964c-fe317addc845.wav",
+  },
+  {
+    name: "Barack Obama",
+    id: "TM:7r5x3re7fe8t",
+    imageUrl: "https://brenebrown.com/wp-content/uploads/2021/10/DTL_PresidentBarackObama_Arapawa_Dark.jpg",
+    audioUrl:
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/0/a/1/vocodes_0a116d83-a0ee-44a9-9b2b-d2e5423438e8.wav",
   },
   {
     name: "Naruto Uzumaki",
@@ -45,7 +65,15 @@ const voices = [
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4xFYfcRAGACn7HzTK1-3-JT-lml2AtO6Ssg&usqp=CAU",
     audioUrl:
-      "https://storage.googleapis.com/vocodes-public/tts_inference_output/4/7/3/vocodes_47386c2f-3eba-4b3c-83ee-10094daea324.wav",
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/7/7/8/vocodes_7786f378-e087-4cd4-8bed-55f2bd98dc7a.wav",
+  },
+  {
+    name: "Ash Ketchum",
+    id: "TM:en3qrb031jz4",
+    imageUrl:
+      "https://thicc.mywaifulist.moe/waifus/22902/1e5d7a9a281847e9b130ffb4f1a1481b21d6161131d675f1e87a39c35a8c130c_thumb.png",
+    audioUrl:
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/8/0/4/vocodes_804a588d-2c7e-41d9-8aa1-b3e273593f30.wav",
   },
   {
     name: "Belle",
@@ -53,15 +81,15 @@ const voices = [
     imageUrl:
       "https://i.pinimg.com/originals/c7/39/51/c73951f4743f2e2996ca084582957792.jpg",
     audioUrl:
-      "https://storage.googleapis.com/vocodes-public/tts_inference_output/9/6/6/vocodes_966b5408-f868-4ca3-b81d-27a50610569a.wav",
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/8/0/0/vocodes_800f60a9-6533-4eac-8a8e-1c0a161b8fe9.wav",
   },
   {
     name: "Yoda",
-    id: "TM:4qawq2jn91e7",
+    id: "TM:fmspb239ea3a",
     imageUrl:
       "https://i.pinimg.com/564x/0d/9e/6b/0d9e6b830642bb88c37f2decc146bbaf.jpg",
     audioUrl:
-      "https://storage.googleapis.com/vocodes-public/tts_inference_output/c/a/5/vocodes_ca50c686-f1a8-4b32-a32e-5bdeb88e61bb.wav",
+      "https://storage.googleapis.com/vocodes-public/tts_inference_output/d/7/7/vocodes_d77b54b9-1b6b-4c91-afd2-3a4ee8b550ec.wav",
   },
 ];
 
