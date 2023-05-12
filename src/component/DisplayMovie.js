@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import styles from "../css/DisplayMovie.module.css";
@@ -16,6 +16,10 @@ export default function DisplayMovie() {
   const dispatch = useDispatch();
 
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const createNewHandler = () => {
     setShowModal(true);
