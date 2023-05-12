@@ -9,6 +9,7 @@ The APP combines various AI technologies such as natural language processing, co
 <h1>Architecture</h1>
 This web application is a single-page application (SPA) created using React and Redux for the frontend, while the backend is a RESTful API developed with NodeJS and Express. The API communicates with multiple third-party APIs such as ChatGPT, Dalle 2, and FakeYou to provide its functionalities.
 
+
 The video and image files are stored in AWS S3, while the metadata associated with the videos is saved in AWS DynamoDB. The backend of the application is deployed on AWS Beanstalk, while the frontend resides in an S3 bucket. Both the frontend and backend are configured with a CodePipeline for continuous integration and continuous deployment (CI/CD).
 
 <h1>Workflow</h1>
