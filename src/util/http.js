@@ -1,7 +1,12 @@
 import axios from "axios";
 
-// const BACKEND_URL = "http://localhost:8080";
-const BACKEND_URL = "http://staryai.ap-southeast-2.elasticbeanstalk.com";
+let BACKEND_URL;
+
+if (process.env.NODE_ENV === "development") {
+  BACKEND_URL = "http://localhost:8080";
+} else if (process.env.NODE_ENV === "production") {
+  BACKEND_URL = "http://staryai.ap-southeast-2.elasticbeanstalk.com";
+}
 
 export async function createStory(prompt) {
   const data = { prompt: prompt };
@@ -30,19 +35,28 @@ export async function createImages(story, style) {
   }
 }
 
-
-export async function createMovie(prompt, story, images, narrator, handleStatusUpdate) {
+export async function createMovie(
+  prompt,
+  story,
+  images,
+  narrator,
+  handleStatusUpdate
+) {
   const data = { prompt, story, images, narrator };
   const createMovieUrl = `${BACKEND_URL}/create/create-movie`;
   const getCreateMovieStatusUrl = `${BACKEND_URL}/create/get-create-movie-status`;
 
   try {
-    const { data: { requestId } } = await axios.post(createMovieUrl, data);
+    const {
+      data: { requestId },
+    } = await axios.post(createMovieUrl, data);
 
     await new Promise((resolve, reject) => {
       const checkInterval = setInterval(async () => {
         try {
-          const { data: statusData } = await axios.get(`${getCreateMovieStatusUrl}?requestId=${requestId}`);
+          const { data: statusData } = await axios.get(
+            `${getCreateMovieStatusUrl}?requestId=${requestId}`
+          );
           handleStatusUpdate(statusData);
 
           if (statusData.status === "finished") {
@@ -66,10 +80,20 @@ export async function createMovie(prompt, story, images, narrator, handleStatusU
   }
 }
 
-
-
 export async function getVideos() {
   const httpUrl = BACKEND_URL + "/create/get-videos";
+
+  try {
+    const response = await axios.get(httpUrl);
+    return response.data;
+  } catch (error) {
+    console.error("Error in get video urls:", error);
+    throw error;
+  }
+}
+
+export async function getVideo(videoId) {
+  const httpUrl = BACKEND_URL + `/create/get-video?videoId=${videoId}`;
 
   try {
     const response = await axios.get(httpUrl);

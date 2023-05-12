@@ -23,7 +23,7 @@ export default function DisplayMovie() {
 
   const createNewHandler = () => {
     setShowModal(true);
-    document.body.style.overflow = "hidden"; // disable scrolling
+    document.body.style.overflow = "hidden"; 
   };
 
   const handleModalClose = (confirmed) => {
@@ -31,7 +31,7 @@ export default function DisplayMovie() {
     if (confirmed) {
       dispatch(movieActions.reset());
     }
-    document.body.style.overflow = "auto"; // re-enable scrolling
+    document.body.style.overflow = "auto"; 
   };
 
   return (
