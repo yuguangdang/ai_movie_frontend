@@ -1,11 +1,15 @@
 <h1>Overview</h1>
 
+Stary AI website: http://stary-ai.s3-website-ap-southeast-2.amazonaws.com/
+
 Stary AI is a web APP that enables users to enter a prompt, such as a character or a subject, which is then used to generate a story using the ChatGPT API. Users can also choose a style of image for each paragraph in the created story, which is generated using Dalle 2. Additionally, users can select a narrative voice, which can be that of a celebrity or even an anime character. The story text is then sent to FakeYou, which returns an audio file in the chosen character's voice. Finally, the application creates a video that displays images with the narration for the user to enjoy.
 
 The APP combines various AI technologies such as natural language processing, computer vision, and text-to-speech to create a unique and personalized user experience. It could potentially be used for various purposes such as entertainment, education, or marketing.
 
 <h1>Architecture</h1>
 This web application is a single-page application (SPA) created using React and Redux for the frontend, while the backend is a RESTful API developed with NodeJS and Express. The API communicates with multiple third-party APIs such as ChatGPT, Dalle 2, and FakeYou to provide its functionalities.
+
+The video and image files are stored in AWS S3, while the metadata associated with the videos is saved in AWS DynamoDB. The backend of the application is deployed on AWS Beanstalk, while the frontend resides in an S3 bucket. Both the frontend and backend are configured with a CodePipeline for continuous integration and continuous deployment (CI/CD).
 
 <h1>Workflow</h1>
 
