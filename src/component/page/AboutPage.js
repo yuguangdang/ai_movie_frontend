@@ -7,7 +7,6 @@ import Panel from "../UI/Panel";
 import styles from "../../css/About.module.css";
 
 function AboutPage() {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -80,7 +79,7 @@ function AboutPage() {
                 using different languages (NodeJS, Python and PHP), frameworks
                 (Express, Django, CodeIgniter), and databases (SQL and NoSQL). I
                 also possess hands-on experience in AWS and GCP cloud services,
-                such as App Engine, S3, and Lambda.
+                such as Beanstalk, CodePipeLine, DynamoDB, App Engine, etc.
               </p>
               <p>
                 Web development is not just a job for me, but a hobby that I
