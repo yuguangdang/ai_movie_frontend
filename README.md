@@ -32,6 +32,10 @@ The video and image files are stored in AWS S3, while the metadata associated wi
 <h3>Videos page</h3>
 <img width="500" alt="videos" src="https://github.com/yuguangdang/stary_ai_frontend/assets/55920971/053b8d79-d26c-4efa-ab9b-25cbdb848c4e">
 
+<h3>Video detail page</h3>
+<img width="500" alt="videoDetail" src="https://github.com/yuguangdang/stary_ai_frontend/assets/55920971/03eeeb0c-8509-47c0-9941-272aa732fbd8">
+
+
 <h3>An example of the final video</h3>
 http://www.stary-ai.com/videoDetail/a7c78ffd21ae6fc8.mp4
 
