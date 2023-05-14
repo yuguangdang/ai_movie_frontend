@@ -1,6 +1,6 @@
 <h1>Overview</h1>
 
-Stary AI website: http://stary-ai.s3-website-ap-southeast-2.amazonaws.com/
+Stary AI website: http://www.stary-ai.com
 
 Stary AI is a web APP that enables users to enter a prompt, such as a character or a subject, which is then used to generate a story using the ChatGPT API. Users can also choose a style of image for each paragraph in the created story, which is generated using Dalle 2. Additionally, users can select a narrative voice, which can be that of a celebrity or even an anime character. The story text is then sent to FakeYou, which returns an audio file in the chosen character's voice. Finally, the application creates a video that displays images with the narration for the user to enjoy.
 
@@ -29,6 +29,9 @@ The video and image files are stored in AWS S3, while the metadata associated wi
 <h3>About page</h3>
 <img width="500" alt="step3" src="https://user-images.githubusercontent.com/55920971/236164388-43145c48-2855-4ca0-a94a-3d404a6254c7.png">
 
+<h3>Videos page</h3>
+<img width="500" alt="videos" src="https://github.com/yuguangdang/stary_ai_frontend/assets/55920971/053b8d79-d26c-4efa-ab9b-25cbdb848c4e">
+
 <h3>An example of the final video</h3>
 https://www.youtube.com/watch?v=kZQKj32JCzw&ab_channel=StaryAI
 
@@ -41,4 +44,5 @@ The App adopts responsive web design to provide an optimal viewing and interacti
   <img width="150" height="300" alt="step2-m" src="https://user-images.githubusercontent.com/55920971/236356550-cb63cd42-2c44-4157-8f82-3e1cc5f20ac7.png">
   <img width="150" height="300" alt="step3-m" src="https://user-images.githubusercontent.com/55920971/236356557-2a866b68-52ea-403e-bdd6-7d184f303f76.png">
   <img width="150" height="300" alt="about-m" src="https://user-images.githubusercontent.com/55920971/236356560-b8bd2003-98e3-4648-83a2-2058965230b0.png">
+  <img width="150" height="300" alt="videos-m" src="https://github.com/yuguangdang/stary_ai_frontend/assets/55920971/0959dd4a-46a2-4760-867e-d2017f81b00a">
 </div>
