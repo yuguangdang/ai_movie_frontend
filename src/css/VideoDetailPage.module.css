@@ -17,8 +17,6 @@
 
 .videoContainer {
   display: flex;
-  padding: 2%;
-  margin: 2% 0%;
   flex-wrap: wrap;
 }
 
@@ -50,7 +48,6 @@
   border-color: #39394c !important;
   border-radius: 0.5rem;
   color: #fff !important;
-  margin: 4% 0% 2% 0%;
   flex-wrap: wrap;
 }
 
@@ -99,8 +96,8 @@
 }
 
 @media (max-width: 600px) {
-  .storyContainer {
-    margin-top: 4%;
+  .videoContainer {
+    margin: 2% 0%;
   }
 
   .pictureCard {
