@@ -28,7 +28,7 @@
 }
 
 .imageContainer img {
-  width: 80%;
+  width: 100%;
   min-width: 10rem;
   max-width: 20rem;
 }
