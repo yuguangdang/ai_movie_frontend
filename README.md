@@ -33,7 +33,7 @@ The video and image files are stored in AWS S3, while the metadata associated wi
 <img width="500" alt="videos" src="https://github.com/yuguangdang/stary_ai_frontend/assets/55920971/053b8d79-d26c-4efa-ab9b-25cbdb848c4e">
 
 <h3>An example of the final video</h3>
-https://www.youtube.com/watch?v=kZQKj32JCzw&ab_channel=StaryAI
+[https://www.youtube.com/watch?v=kZQKj32JCzw&ab_channel=StaryAI]
 
 <h3>Responsive Web Design</h3>
 The App adopts responsive web design to provide an optimal viewing and interaction experience across a wide range of devices, including desktop computers, laptops, tablets, and smartphones. For example, the App adjusts the size and placement of images and text, reorganize navigation menus, and adjust the flow of content to make it easier to read and interact with on smaller screens. Below are screenshots of how the App looks like in a mobile size screen.
