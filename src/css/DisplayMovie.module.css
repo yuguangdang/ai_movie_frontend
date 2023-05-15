@@ -59,7 +59,6 @@
   margin: 1%;
   width: 23%;
   display: inline;
-
 }
 
 .pictureCard p {
@@ -92,8 +91,9 @@
   .pictureCard {
     width: 48%;
   }
-    .video {
-    width: 100%;
+
+  .video {
+    width: -webkit-fill-available;
   }
 }
 
