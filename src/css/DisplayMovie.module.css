@@ -12,6 +12,7 @@
 
 .loadingContainer {
   text-align: center;
+  margin-bottom: 4%;
 }
 
 .videoContainer {
@@ -90,13 +91,13 @@
   }
 
   .video {
-    width: 500px;
+    width: 400px;
   }
 }
 
 @media (max-width: 600px) {
-  .videoContainer {
-    margin: 2% 0%;
+  .storyContainer {
+    margin-top: 4%;
   }
 
   .pictureCard {
