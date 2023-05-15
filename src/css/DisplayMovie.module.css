@@ -12,11 +12,11 @@
 
 .loadingContainer {
   text-align: center;
-  margin-bottom: 4%;
 }
 
 .videoContainer {
   display: flex;
+  padding: 2% 0% 0% 0%;
   flex-wrap: wrap;
 }
 
@@ -48,6 +48,7 @@
   border-color: #39394c !important;
   border-radius: 0.5rem;
   color: #fff !important;
+  margin: 4% 0% 2% 0%;
   flex-wrap: wrap;
 }
 
@@ -58,10 +59,12 @@
   margin: 1%;
   width: 23%;
   display: inline;
+
 }
 
 .pictureCard p {
-  text-align: center;
+  text-align: justify;
+  font-size: 0.8rem;
 }
 
 .pictureCard img {
@@ -89,9 +92,8 @@
   .pictureCard {
     width: 48%;
   }
-
-  .video {
-    width: 400px;
+    .video {
+    width: 100%;
   }
 }
 
