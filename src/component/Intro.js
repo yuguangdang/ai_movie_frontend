@@ -25,7 +25,7 @@ function Intro() {
           </ol>
           <hr></hr>
           <p className={styles.p}>
-            Stary AI is powered by ChatGTP, DALL.E and FakeYou.
+            Stary AI is powered by ChatGPT, DALL.E and FakeYou.
           </p>
         </div>
         <div className={styles.imageContainer}>

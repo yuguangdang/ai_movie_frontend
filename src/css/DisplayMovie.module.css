@@ -93,7 +93,7 @@
   }
 
   .video {
-    width: -webkit-fill-available;
+    width: 100%;
   }
 }
 
